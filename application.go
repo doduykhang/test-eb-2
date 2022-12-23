@@ -2,6 +2,8 @@ package main
 
 import (
 	"net/http"
+
+	"github.com/tjarratt/babble"
 )
 
 func main() {
@@ -10,5 +12,6 @@ func main() {
 }
 
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("hello world update with go mod"))
+	babbler := babble.NewBabbler()
+	w.Write([]byte("hello " + babbler.Babble()))
 }
