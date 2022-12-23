@@ -10,5 +10,5 @@ func main() {
 }
 
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("hello world 3"))
+	w.Write([]byte("hello world update with go mod"))
 }
